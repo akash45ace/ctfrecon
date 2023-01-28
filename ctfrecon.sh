@@ -11,11 +11,11 @@ elif [ $num -eq 2 ]; then
 	echo -e "\e[32m"	
 	echo '[*]  port scan'
 	echo -e "\e[0m"
-	nmap -sS $ip -p- | grep -A 30 'Nmap scan report'
+	nmap -sS $ip | grep -A 30 'Nmap scan report'
 	echo -e "\e[32m"
 	echo '[*] port enumeration'
 	echo -e "\e[0m"
-	nmap -sV -sC -p- $ip | grep -A 30 "Nmap scan report"
+	nmap -sV -sC $ip | grep -A 30 "Nmap scan report"
 	echo -e "\e[32m"
 	echo '[*]directory enum at 80'
 	echo -e "\e[0m"
