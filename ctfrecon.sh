@@ -17,8 +17,8 @@ elif [ $num -eq 2 ]; then
 	echo 'for dir-enum on another port give the port no'
 	echo 'or press enter to exit.'
 	read port
-	if [ $userInput =~ ^[0-9]+$ ]; then
- 		gobuster dir -u http://$ip:$port -w /usr/share/wordlists/dirb/common.txt | grep -A 50 'Starting gobuster'
+	if [ $userInput -eq ^[0-9]+$ ]; then
+ 		echo 'good job'
    	else
     		 echo 'no port given'
 	fi
