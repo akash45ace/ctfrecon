@@ -15,12 +15,12 @@ elif [ $num -eq 2 ]; then
 	echo -e "\033[32m[*]directory enumerating... at 80\033[0m"
 	gobuster dir -u http://$ip:80 -w /usr/share/wordlists/dirb/common.txt | grep -A 50 'Starting gobuster'
 	echo 'for dir-enum on another port give the port no'
-	echo 'or press enter to exit.'
+	echo 'or press other keys to exit.'
 	read port
-	if [ $userInput -eq ^[0-9]+$ ]; then
- 		echo 'good job'
-   	else
-    		 echo 'no port given'
+	if [[ $port =~ ^[0-9]+$ ]]; then
+  		gobuster dir -u http://$ip:$port -w /usr/share/wordlists/dirb/common.txt | grep -A 50 'Starting gobuster'
+	else
+  		echo "closing ctfrecon"
 	fi
 	
 	
