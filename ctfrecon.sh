@@ -1,5 +1,6 @@
 #!/bin/bash
 echo -e '\n \033[1m ### Written by Akash ###\033[0m\n'
+echo -e '\n \033[1m Run with Root Permission \033[0m\n'
 echo -e "\033[31m[+] 1. Print your ip infrmation.
 [+] 2. Full ctf recon[start script with root].\033[0m"
 read num
